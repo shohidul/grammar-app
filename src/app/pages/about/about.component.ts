@@ -17,26 +17,11 @@ import { MobileHeaderComponent } from '../../components/mobile-header/mobile-hea
 
       <div class="content">
         <div class="app-info card">
-          <h3>Money Manager</h3>
+          <h3>Grammer</h3>
           <p class="version">Version 1.0.0</p>
           <p class="description">
-            A powerful personal finance tracking application designed to help you manage your income and expenses effectively.
-            Built with modern web technologies, this app provides a seamless experience for tracking your financial transactions
-            and understanding your spending patterns.
+            Description here...
           </p>
-        </div>
-
-        <div class="features card">
-          <h3>Key Features</h3>
-          <ul>
-            <li>Track income and expenses with detailed categorization</li>
-            <li>Visual analytics with charts and graphs</li>
-            <li>Monthly transaction overview</li>
-            <li>Custom categories management</li>
-            <li>Data export in Excel/CSV formats</li>
-            <li>PIN protection for privacy</li>
-            <li>Responsive design for all devices</li>
-          </ul>
         </div>
 
         <div class="developer card">

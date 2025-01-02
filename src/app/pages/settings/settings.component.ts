@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MobileHeaderComponent } from '../../components/mobile-header/mobile-header.component';
 import { SecurityCardComponent } from './components/security-card.component';
-import { DataManagementCardComponent } from './components/data-management-card.component';
+// import { DataManagementCardComponent } from './components/data-management-card.component';
 import { LanguageCardComponent } from './components/language-card.component';
 import { AppModeCardComponent } from './components/app-mode-card.component';
 import { ThemeCardComponent } from './components/theme-card.component';
@@ -16,7 +16,7 @@ import { TranslatePipe } from '../../components/shared/translate.pipe';
     CommonModule,
     MobileHeaderComponent,
     SecurityCardComponent,
-    DataManagementCardComponent,
+    // DataManagementCardComponent,
     LanguageCardComponent,
     AppModeCardComponent,
     ThemeCardComponent,
@@ -35,7 +35,7 @@ import { TranslatePipe } from '../../components/shared/translate.pipe';
         <app-language-card />
         <app-theme-card />
         <app-security-card />
-        <app-data-management-card />
+        <!-- <app-data-management-card /> -->
       </div>
     </div>
   `,

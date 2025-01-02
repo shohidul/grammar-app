@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { DbService } from './services/db.service';
+// import { DbService } from './services/db.service';
 import { MenuService } from './services/menu.service';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { Subscription } from 'rxjs';
@@ -51,14 +51,14 @@ export class AppComponent implements OnInit, OnDestroy {
   isSideMenuOpen = false;
   private menuSubscription: Subscription;
 
-  constructor(private dbService: DbService, private menuService: MenuService, private themeService: ThemeService) {
+  constructor(private menuService: MenuService, private themeService: ThemeService) {
     this.menuSubscription = this.menuService.menuState$.subscribe(
       (state) => (this.isSideMenuOpen = state)
     );
   }
 
   async ngOnInit() {
-    await this.dbService.initializeDB();
+    // await this.dbService.initializeDB();
     const savedMode = localStorage.getItem('themeMode') as 'system' | 'light' | 'dark';
     const savedColor = localStorage.getItem('themeColor');
 
