@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslatePipe } from '../shared/translate.pipe';
+import { FeatureFlagService } from '../../services/feature-flag.service';
 
 @Component({
   selector: 'app-side-menu',
@@ -22,18 +23,18 @@ import { TranslatePipe } from '../shared/translate.pipe';
 
         <a routerLink="/settings" routerLinkActive="active" (click)="close()">
           <span class="material-icons">settings</span>
-          {{ 'settings.title' | translate }}
+          {{ 'menu.settings' | translate }}
         </a>
+
+        <!-- <a routerLink="/tutorial" routerLinkActive="active" (click)="close()">
+          <span class="material-icons">help</span>
+          {{ 'menu.howToUse' | translate }}
+        </a> -->
 
         <a routerLink="/about" routerLinkActive="active" (click)="close()">
           <span class="material-icons">info</span>
           {{ 'menu.about' | translate }}
         </a>
-
-        <!-- <a routerLink="/tutorial" routerLinkActive="active" (click)="close()">
-          <span class="material-icons">help</span>
-          {{'menu.howToUse '| translate}}
-        </a> -->
       </div>
     </nav>
     <div class="menu-overlay" *ngIf="isOpen" (click)="close()"></div>
@@ -106,6 +107,10 @@ import { TranslatePipe } from '../shared/translate.pipe';
       color: white;
     }
 
+    .menu-items a.active .beta-badge {
+      color: white;
+    }
+
     .beta-badge {
       font-size: 0.6rem;
       color: var(--primary-color);
@@ -132,11 +137,21 @@ import { TranslatePipe } from '../shared/translate.pipe';
 })
 export class SideMenuComponent {
   @Input() isOpen = false;
-  @Output() closeMenu = new EventEmitter<void>();
+  @Output() menuClosed = new EventEmitter<void>();
   logoFailed = false;
 
+  constructor(private featureFlagService: FeatureFlagService) {}
+
+  isFeatureEnabled(featureId: string): boolean {
+    return this.featureFlagService.isFeatureEnabled(featureId);
+  }
+
+  isFeatureBeta(featureId: string): boolean {
+    return this.featureFlagService.isFeatureBeta(featureId);
+  }
+
   close() {
-    this.closeMenu.emit();
+    this.menuClosed.emit();
   }
 
   onImageError(event: Event) {
