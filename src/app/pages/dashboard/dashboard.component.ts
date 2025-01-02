@@ -43,55 +43,52 @@ import { MenuService } from '../../services/menu.service';
               #categoryButton
             >
               <span class="material-symbols-rounded">{{ category.icon }}</span>
-              <span class="category-name">{{ category.name | translate }}</span>
+              <span class="category-name">{{ category.name }}</span>
             </button>
           }
         </div>
       </div>
-      
     </div>
   `,
-
-  styles: [
-    `
-  .dashboard {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  .top-actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    position: sticky;
-    top: -16px;
-    z-index: 100;
-  }
-
-  .menu-button, .sync-button {
-    background: none;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .menu-button:hover, .sync-button:hover {
-    background-color: var(--background-color-hover);
-  }
-
-  @media (min-width: 769px) {
-    .menu-button {
-      display: none;
+  styles: [`
+    .dashboard {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
     }
-  }
-  
-  .categories-grid {
+    
+    .top-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      position: sticky;
+      top: -16px;
+      z-index: 100;
+    }
+
+    .menu-button, .sync-button {
+      background: none;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-button:hover, .sync-button:hover {
+      background-color: var(--background-color-hover);
+    }
+
+    @media (min-width: 769px) {
+      .menu-button {
+        display: none;
+      }
+    }
+    
+    .categories-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
       gap: 1rem;
@@ -128,17 +125,15 @@ import { MenuService } from '../../services/menu.service';
       font-size: 0.75rem;
       text-align: center;
     }
-`,
-  ],
+  `]
 })
-  
 export class DashboardComponent implements OnInit {
   isAdvancedMode: boolean = false;
   selectedIcon: any = null;
   grammerCategories = [
-    { name: 'Tense', icon: 'schedule' },
-    { name: 'Sentence', icon: 'text_fields' },
-    { name: 'Article', icon: 'article' }
+    { name: 'Tense', icon: 'schedule', route: 'tense' },
+    { name: 'Sentence', icon: 'text_fields', route: 'sentence' },
+    { name: 'Article', icon: 'article', route: 'article' }
   ];
 
   constructor(
@@ -149,16 +144,14 @@ export class DashboardComponent implements OnInit {
   ) {}
   
   async ngOnInit() {
-    
     this.featureFlagService.getAppMode().subscribe(
       isAdvanced => this.isAdvancedMode = isAdvanced
     );
-    
   }
 
   selectCategory(category: any) {
     this.selectedIcon = category;
-
+    this.router.navigate(['/content', category.route]);
   }
   
   reloadPage() {
@@ -168,6 +161,4 @@ export class DashboardComponent implements OnInit {
   toggleMenu() {
     this.menuService.toggleMenu();
   }
-
-  
 }

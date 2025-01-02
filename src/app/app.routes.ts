@@ -26,6 +26,11 @@ export const routes: Routes = [
         loadComponent: () => 
           import('./pages/about/about.component').then(m => m.AboutComponent)
       },
+      {
+        path: 'content/:topic',
+        loadComponent: () =>
+          import('./pages/content/content.component').then(m => m.ContentComponent)
+      }
     ]
   },
   {
@@ -33,7 +38,6 @@ export const routes: Routes = [
     loadComponent: () => 
       import('./pages/pin/pin.component').then(m => m.PinComponent)
   },
-  // Fallback route for undefined paths, redirects to the home page
   {
     path: '**',
     redirectTo: ''
