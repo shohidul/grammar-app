@@ -33,7 +33,22 @@ import { MenuService } from '../../services/menu.service';
         </button>
       </div>
 
-
+      <div class="contents">
+        <div class="categories-grid" #categoriesGrid>
+          @for (category of grammerCategories; track category.name) {
+            <button 
+              class="category-item"
+              [class.selected]="selectedIcon?.icon === category.icon && selectedIcon?.name === category.name"
+              (click)="selectCategory(category)"
+              #categoryButton
+            >
+              <span class="material-symbols-rounded">{{ category.icon }}</span>
+              <span class="category-name">{{ category.name | translate }}</span>
+            </button>
+          }
+        </div>
+      </div>
+      
     </div>
   `,
 
@@ -76,12 +91,55 @@ import { MenuService } from '../../services/menu.service';
     }
   }
   
+  .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 1rem;
+      padding: 1rem 1rem 3.125rem 1rem;
+      overflow-y: auto;
+    }
+
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: none;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+      border: 1px dashed var(--dashed-border);
+    }
+
+    .category-item:hover {
+      background-color: var(--background-color-hover);
+    }
+
+    .category-item.selected {
+      background-color: var(--primary-color);
+      color: white !important;
+    }
+
+    .category-name {
+      font-size: 0.75rem;
+      text-align: center;
+    }
 `,
   ],
 })
   
 export class DashboardComponent implements OnInit {
   isAdvancedMode: boolean = false;
+  selectedIcon: any = null;
+  grammerCategories = [
+    { name: 'Tense', icon: 'schedule' },
+    { name: 'Sentence', icon: 'text_fields' },
+    { name: 'Article', icon: 'article' }
+  ];
 
   constructor(
     private router: Router, 
@@ -97,6 +155,11 @@ export class DashboardComponent implements OnInit {
     );
     
   }
+
+  selectCategory(category: any) {
+    this.selectedIcon = category;
+
+  }
   
   reloadPage() {
     this.document.defaultView?.location.reload();
@@ -105,4 +168,6 @@ export class DashboardComponent implements OnInit {
   toggleMenu() {
     this.menuService.toggleMenu();
   }
+
+  
 }
