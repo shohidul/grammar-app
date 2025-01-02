@@ -1,0 +1,535 @@
+{
+  "common": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "amount": "Amount",
+    "date": "Date",
+    "memo": "Memo",
+    "category": "Category",
+    "type": "Type",
+    "required": "Required",
+    "add": "Add",
+    "noMemo": "No memo",
+    "total": "Total"
+  },
+  "calculator": {
+    "add_memo": "Add memo",
+    "today": "Today"
+  },
+  "menu": {
+    "title": "Money Manager",
+    "transactions": "Transactions",
+    "charts": "Charts",
+    "fuelLogs": "Fuel Logs",
+    "loanManagement": "Loan Management",
+    "assetManagement": "Asset Management",
+    "export": "Export",
+    "settings": "Settings",
+    "howToUse": "How to Use",
+    "about": "About",
+    "categories": "Categories"
+  },
+  "categories": {
+    "title": "Categories",
+    "name": "Category Name",
+    "all": "All",
+    "budget": "Monthly Budget",
+    "goal": "Monthly Goal",
+    "subType": "Category Sub-Type",
+    "subTypes": {
+      "none": "Regular",
+      "loan": "Loan",
+      "repaid": "Repaid",
+      "asset": "Asset",
+      "fuel": "Fuel"
+    },
+    "filters": {
+      "title": "Filters",
+      "expense": "Expense",
+      "income": "Income"
+    },
+    "actions": {
+      "resetOrder": "Reset Order",
+      "addNew": "Add New Category"
+    },
+    "groups": {
+      "common": "Common",
+      "finance": "Finance",
+      "food": "Food",
+      "transportation": "Transportation",
+      "vehicle": "Vehicle",
+      "shopping": "Shopping",
+      "entertainment": "Entertainment",
+      "healthFitness": "Health & Fitness",
+      "family": "Family",
+      "home": "Home",
+      "electronics": "Electronics",
+      "billsUtilities": "Bills & Utilities",
+      "housing": "Housing",
+      "income": "Income",
+      "icons": {
+        "common": {
+          "home": "Home",
+          "food": "Food",
+          "transport": "Transport",
+          "shopping": "Shopping",
+          "entertainment": "Entertainment",
+          "health": "Health",
+          "education": "Education",
+          "work": "Work",
+          "utilities": "Utilities",
+          "clothing": "Clothing",
+          "gift": "Gift",
+          "travel": "Travel",
+          "pets": "Pets",
+          "sports": "Sports",
+          "charity": "Charity",
+          "hobbies": "Hobbies",
+          "other": "Other",
+          "bolt": "Bolt",
+          "category": "Category",
+          "icecream": "Ice Cream",
+          "nutrition": "Nutrition"
+        },
+        "finance": {
+          "salary": "Salary",
+          "investment": "Investment",
+          "savings": "Savings",
+          "bills": "Bills",
+          "bank": "Bank",
+          "creditCard": "Credit Card",
+          "insurance": "Insurance",
+          "tax": "Tax",
+          "loan": "Loan"
+        },
+        "food": {
+          "restaurant": "Restaurant",
+          "cafe": "Cafe",
+          "grocery": "Grocery",
+          "fastFood": "Fast Food",
+          "bar": "Bar",
+          "foodDelivery": "Food Delivery",
+          "dining": "Dining",
+          "chef": "Chef",
+          "liquor": "Liquor",
+          "smokingRooms": "Smoking Rooms"
+        },
+        "transportation": {
+          "bus": "Bus",
+          "train": "Train",
+          "taxi": "Taxi",
+          "flight": "Flight",
+          "subway": "Subway",
+          "bike": "Bike",
+          "carRental": "Car Rental",
+          "traffic": "Traffic",
+          "navigation": "Navigation",
+          "flightTakeoff": "Flight Takeoff"
+        },
+        "vehicle": {
+          "car": "Car",
+          "motorcycle": "Motorcycle",
+          "fuel": "Fuel",
+          "maintenance": "Maintenance",
+          "parking": "Parking",
+          "carWash": "Car Wash",
+          "truck": "Truck",
+          "evCharging": "EV Charging",
+          "garage": "Garage"
+        },
+        "shopping": {
+          "cart": "Cart",
+          "hanger": "Hanger",
+          "giftCard": "Gift Card",
+          "onlineShopping": "Online Shopping",
+          "jewelry": "Jewelry",
+          "beauty": "Beauty",
+          "discount": "Discount",
+          "wallet": "Wallet",
+          "market": "Market",
+          "shoppingBag": "Shopping Bag",
+          "attachFile": "Attach File"
+        },
+        "entertainment": {
+          "movies": "Movies",
+          "games": "Games",
+          "music": "Music",
+          "books": "Books",
+          "theater": "Theater",
+          "sportsEvent": "Sports Event",
+          "party": "Party",
+          "art": "Art",
+          "dance": "Dance",
+          "sportsAndOutdoors": "Sports and Outdoors",
+          "featuredSeasonalAndGifts": "Gifts",
+          "book5": "Book 5",
+          "kingBed": "King Bed"
+        },
+        "healthFitness": {
+          "medical": "Medical",
+          "pharmacy": "Pharmacy",
+          "gym": "Gym",
+          "doctor": "Doctor",
+          "dental": "Dental",
+          "yoga": "Yoga",
+          "diet": "Diet",
+          "mentalHealth": "Mental Health",
+          "healthAndSafety": "Health and Safety",
+          "healthAndBeauty": "Health and Beauty"
+        },
+        "billsUtilities": {
+          "electricity": "Electricity",
+          "water": "Water",
+          "internet": "Internet",
+          "phoneBill": "Phone Bill",
+          "gas": "Gas",
+          "tvCable": "TV Cable",
+          "heating": "Heating",
+          "solarPower": "Solar Power",
+          "garbage": "Garbage"
+        },
+        "housing": {
+          "rent": "Rent",
+          "mortgage": "Mortgage",
+          "insurance": "Insurance",
+          "propertyTax": "Property Tax",
+          "hotel": "Hotel",
+          "security": "Security",
+          "key": "Key",
+          "apartment": "Apartment",
+          "realEstate": "Real Estate"
+        },
+        "family": {
+          "children": "Children",
+          "familyCare": "Family Care",
+          "elderCare": "Elder Care",
+          "petCare": "Pet Care",
+          "babyProducts": "Baby Products",
+          "education": "Education",
+          "pregnancy": "Pregnancy",
+          "playground": "Playground",
+          "parenting": "Parenting",
+          "person": "Person",
+          "group": "Group"
+        },
+        "home": {
+          "furniture": "Furniture",
+          "appliances": "Appliances",
+          "homeRepair": "Home Repair",
+          "cleaning": "Cleaning",
+          "garden": "Garden",
+          "tools": "Tools",
+          "decor": "Decor",
+          "painting": "Painting",
+          "lighting": "Lighting"
+        },
+        "electronics": {
+          "gadgets": "Gadgets",
+          "phone": "Phone",
+          "computer": "Computer",
+          "electronics": "Electronics",
+          "tv": "TV",
+          "camera": "Camera",
+          "gamingConsole": "Gaming Console",
+          "wearables": "Wearables",
+          "smartHome": "Smart Home",
+          "devicesOther": "Other Devices",
+          "phoneIphone": "iPhone"
+        },
+        "income": {
+          "salary": "Salary",
+          "business": "Business",
+          "freelance": "Freelance",
+          "investment": "Investment",
+          "rental": "Rental",
+          "gift": "Gift",
+          "interest": "Interest",
+          "bonus": "Bonus",
+          "otherIncome": "Other Income",
+          "profit": "Profit"
+        }
+      }
+    },
+    "add": {
+      "title": "Add Category",
+      "namePlaceholder": "Category Name",
+      "selectIcon": "Select an icon",
+      "validation": {
+        "nameRequired": "Category name is required",
+        "iconRequired": "Please select an icon"
+      }
+    },
+    "defaults": {
+      "expense": {
+        "home": "Home",
+        "family": "Family",
+        "food": "Food",
+        "grocery": "Grocery",
+        "transportation": "Transportation",
+        "shopping": "Shopping",
+        "entertainment": "Entertainment",
+        "bills": "Bills",
+        "health": "Health",
+        "others": "Others",
+        "utilities": "Utilities",
+        "clothing": "Clothing",
+        "snacks": "Snacks",
+        "fruits": "Fruits",
+        "car": "Car",
+        "motorcycle": "Motorcycle",
+        "fuel": "Fuel",
+        "beauty": "Beauty",
+        "phoneRecharge": "Phone Recharge",
+        "internet": "Internet",
+        "fitness": "Fitness",
+        "travel": "Travel",
+        "baby": "Baby",
+        "donation": "Donation",
+        "insurance": "Insurance",
+        "tax": "Tax",
+        "telephone": "Telephone",
+        "cigarette": "Cigarette",
+        "sport": "Sport",
+        "pet": "Pet",
+        "electronics": "Electronics",
+        "wine": "Wine",
+        "gift": "Gift",
+        "social": "Social",
+        "book": "Book",
+        "office": "Office",
+        "furniture": "Furniture",
+        "charity": "Charity",
+        "hobbies": "Hobbies"
+      },
+      "loan": {
+        "personalLoanGiven": "Personal Loan Given",
+        "businessLoanGiven": "Business Loan Given",
+        "loanRepaidToMe": "Loan Repaid to Me",
+        "personalLoanTaken": "Personal Loan Taken",
+        "bankLoanTaken": "Bank Loan Taken",
+        "loanPayment": "Loan Payment",
+        "loan": "Loan"
+      },
+      "asset": {
+        "purchaseAsset": "Purchase Asset",
+        "sellAsset": "Sell Asset",
+        "savings": "Savings"
+      },
+      "fuel": {
+        "carFuel": "Car Fuel",
+        "motorcycleFuel": "Motorcycle Fuel",
+        "evCharging": "EV Charging"
+      },
+      "income": {
+        "salary": "Salary",
+        "business": "Business",
+        "investment": "Investment",
+        "otherIncome": "Other Income",
+        "freelance": "Freelance",
+        "rental": "Rental",
+        "gift": "Gift",
+        "interest": "Interest",
+        "bonus": "Bonus"
+      }
+    }
+  },
+  "transaction": {
+    "types": {
+      "income": "Income",
+      "expense": "Expense"
+    },
+    "subTypes": {
+      "none": "Regular",
+      "loan": "Loan",
+      "repaid": "Repaid",
+      "asset": "Asset",
+      "fuel": "Fuel"
+    },
+    "title": {
+      "add": "Add Transaction",
+      "edit": "Edit Transaction"
+    },
+    "edit": {
+      "edit": "Edit",
+      "editFull": "Edit Full"
+    }
+  },
+  "asset": {
+    "name": "Asset Name",
+    "transactionDate": "Transaction Date",
+    "currentValue": "Current Value"
+  },
+  "loan": {
+    "parentLoan": "Parent Loan",
+    "noParentLoan": "No Parent Loan",
+    "lentTo": "Lent to",
+    "borrowedFrom": "Borrowed from",
+    "charts": {
+      "overview": "Loan Overview",
+      "monthlyActivity": "Monthly Loan Activity"
+    },
+    "stats": {
+      "totalGiven": "Total Loans Given",
+      "totalTaken": "Total Loans Taken", 
+      "activeLoans": "Active Loans"
+    },
+    "status": {
+      "dueSoon": "Due Soon"
+    },
+    "loansGiven": "Loans Given",
+    "loansTaken": "Loans Taken",
+    "noLoansGiven": "No loans given yet",
+    "noLoansTaken": "No loans taken yet",
+    "personName": "Person Name",
+    "loanDate": "Loan Date",
+    "dueDate": "Due Date",
+    "remaining": "Remaining",
+    "pending": "Pending",
+    "partial": "Partial",
+    "completed": "Completed"
+  },
+  "fuel": {
+    "price": "Price",
+    "odo": "Odo",
+    "km": "km",
+    "L": "L",
+    "mileage": "Mileage",
+    "kmPerLiter": "km/L",
+    "odometerReading": "Odometer Reading",
+    "fuelQuantity": "Fuel Quantity",
+    "fuelType": "Fuel Type",
+    "types": {
+      "octen": "Octen",
+      "petrol": "Petrol",
+      "diesel": "Diesel",
+      "electric": "Electric",
+      "other": "Other"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "summary": "Summary",
+    "recentTransactions": "Recent Transactions",
+    "viewAll": "View All",
+    "noTransactions": "No transactions found",
+    "income": "Income",
+    "expense": "Expense",
+    "balance": "Balance"
+  },
+  "charts": {
+    "title": "Analytics",
+    "types": {
+      "all": "All",
+      "income": "Income",
+      "expense": "Expense",
+      "fuel": "Fuel"
+    },
+    "list": "list",
+    "noMemo": "No Memo",
+    "notApplicable": "N/A",
+    "dueDate": "Due Date",
+    "inBudget": "Within Budget",
+    "nearBudget": "Near Budget",
+    "budgetReached": "Budget Reached",
+    "overBudget": "Over Budget",
+    "goal25Percent": "Great start! 🌱",
+    "goal50Percent": "Halfway there! 🚀",
+    "goal75Percent": "Almost there! 💪",
+    "goal100Percent": "Goal achieved! 🎉",
+    "goalKeepItUp": "Keep pushing! 💰"
+  },
+  "settings": {
+    "title": "Settings",
+    "advancedMode": {
+      "title": "Advanced Mode",
+      "label": "Enable Advanced Features",
+      "description": "Unlock premium features like Loans, Assets, and Fuel tracking"
+    },
+    "deleteCategory": "Are you sure you want to delete the category '{0}'? This will also permanently delete all the transactions and budget history associated with it.",
+    "clearData": "Are you sure you want to clear all data? This action cannot be undone.",
+    "dataCleared": "All data has been cleared successfully.",
+    "confirmRestore": "Are you sure you want to restore this backup? This will replace all existing data.",
+    "dataRestored": "Data restored successfully.",
+    "invalidDataFormat": "Invalid backup file format.",
+    "failedToParseFile": "Failed to parse the backup file.",
+    "failedToClearData": "Failed to clear data. Please try again.",
+    "language": "Language",
+    "languages": {
+      "en": "English",
+      "bn": "বাংলা"
+    },
+    "theme": {
+      "title": "Theme",
+      "mode": "Theme Mode",
+      "system": "System",
+      "systemDescription": "Follow system appearance",
+      "light": "Light",
+      "lightDescription": "Bright and clean interface",
+      "dark": "Dark",
+      "darkDescription": "Easier on the eyes in low light",
+      "primaryColor": "Primary Color",
+      "colors": {
+        "Blue": "Blue",
+        "Purple": "Purple", 
+        "Green": "Green",
+        "Orange": "Orange",
+        "Red": "Red",
+        "Teal": "Teal",
+        "Pink": "Pink",
+        "Indigo": "Indigo"
+      }
+    }
+  },
+  "months": {
+    "january": "Jan",
+    "february": "Feb",
+    "march": "Mar",
+    "april": "Apr",
+    "may": "May",
+    "june": "Jun",
+    "july": "Jul",
+    "august": "Aug",
+    "september": "Sep",
+    "october": "Oct",
+    "november": "Nov",
+    "december": "Dec"
+  },
+  "export": {
+    "title": "Export",
+    "transactions": "Transactions",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "exportFormat": "Export Format",
+    "excel": "Excel (XLSX)",
+    "csv": "CSV",
+    "exportData": "Export Data",
+    "dateError": "Start date cannot be after end date"
+  },
+  "dataManagement": {
+    "title": "Data Management",
+    "buttons": {
+      "backup": "Backup Data",
+      "clear": "Reset All Data",
+      "restore": "Restore Data",
+      "demo": "Load Demo Data"
+    }
+  },
+  "security": {
+    "title": "Security",
+    "pinLock": {
+      "title": "PIN Lock",
+      "description": "Protect your data with a 4-digit PIN"
+    },
+    "autoLock": {
+      "title": "Auto-lock",
+      "description": "Lock app when switching to background"
+    },
+    "dialogs": {
+      "disablePinConfirm": "Are you sure you want to disable PIN lock? This will remove your PIN.",
+      "pinSetSuccess": "PIN has been set successfully"
+    }
+  }
+}
