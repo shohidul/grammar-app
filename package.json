@@ -52,8 +52,8 @@
     "typescript": "~5.2.0"
   },
   "build": {
-    "appId": "com.io.money.manager",
-    "productName": "IO Money Manager",
+    "appId": "com.grammer.app",
+    "productName": "Grammer App",
     "win": {
       "icon": "assets/images/logo.ico"
     },
@@ -72,7 +72,7 @@
       {
         "name": "@electron-forge/maker-squirrel",
         "config": {
-          "name": "io-money-manager"
+          "name": "grammer_app"
         }
       },
       {
