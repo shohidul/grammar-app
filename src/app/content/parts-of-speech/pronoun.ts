@@ -1,49 +1,49 @@
 export const pronounContent = {
-  title: 'Pronoun',
+  title: 'Pronoun (সর্বনাম)',
   sections: [
     {
-      subtitle: 'Pronoun পরিচিতি',
-      content: 'Pronoun হল এমন শব্দ যা Noun-এর পরিবর্তে ব্যবহৃত হয়।',
-      examples: [
-        'I, me, my',
-        'You, your',
-        'He, him, his',
-        'She, her',
-        'It, its',
-        'We, us, our',
-        'They, them, their'
-      ]
+      subtitle: 'Pronoun কি?',
+      content: 'Pronoun হল একটি শব্দ যা Noun এর স্থলে ব্যবহৃত হয়। উদাহরণস্বরূপ, “he”, “she”, “it”, “they” ইত্যাদি।'
     },
     {
-      subtitle: 'Pronoun-এর প্রকারভেদ',
-      content: 'Pronoun বিভিন্ন প্রকারের হয়:',
+      subtitle: 'Pronoun এর প্রকারভেদ',
       types: [
-        'Personal Pronoun: I, you, he, she, it, we, they',
-        'Possessive Pronoun: mine, yours, his, hers, its, ours, theirs',
-        'Reflexive Pronoun: myself, yourself, himself, herself, itself, ourselves, themselves',
-        'Demonstrative Pronoun: this, that, these, those',
-        'Relative Pronoun: who, whom, whose, which, that',
-        'Interrogative Pronoun: who, whom, which, what, whose'
-      ]
-    },
-    {
-      subtitle: 'Pronoun-এর ব্যবহার',
-      content: 'Pronoun বাক্যে বিভিন্ন ভূমিকায় ব্যবহৃত হয়:',
+        '1. Personal Pronoun: এটি ব্যক্তি বা বস্তু নির্দেশ করে, যেমন “I”, “he”, “she”, “they”',
+        '2. Reflexive Pronoun: এটি কাজের প্রতি ফিরে ফিরে যাওয়া বা নিজেকে নির্দেশ করে, যেমন “myself”, “yourself”',
+        '3. Demonstrative Pronoun: এটি কোন নির্দিষ্ট বস্তু বা ব্যক্তি নির্দেশ করে, যেমন “this”, “that”',
+        '4. Interrogative Pronoun: এটি প্রশ্নের জন্য ব্যবহৃত হয়, যেমন “who”, “which”',
+      ],
       examples: [
-        'Subject: He is studying. (he হল Subject)',
-        'Object: I saw him. (him হল Object)',
-        'Possessive: This is my book. (my হল Possessive Pronoun)'
-      ]
+        'She is reading a book. - সে একটি বই পড়ছে।',
+        'They are playing football. - তারা ফুটবল খেলছে।',
+      ],
     },
     {
-      subtitle: 'অনুশীলনী',
-      content: 'নিচের বাক্যগুলিতে Pronoun চিহ্নিত করুন:',
+      subtitle: 'Pronoun এর গঠন',
+      content: 'Pronoun সাধারণত বাক্যে Noun এর পরিবর্তে ব্যবহৃত হয়। উদাহরণস্বরূপ, “He is my friend.” (সে আমার বন্ধু)।',
+      structure: 'Pronoun + Verb + Object',
+    },
+    {
+      subtitle: 'Pronoun এর বৈশিষ্ট্য',
+      content: 'Pronoun এর কিছু বৈশিষ্ট্য হলো:',
+      types: [
+        '1. এটি Noun এর স্থলে ব্যবহৃত হয়।',
+        '2. এটি বাক্যে পূর্ববর্তী Noun কে প্রতিস্থাপন করে।',
+      ],
+    },
+    {
+      subtitle: 'Pronoun এর উদাহরণ',
+      examples: [
+        'I have a book. - আমার একটি বই আছে।',
+        'They are my friends. - তারা আমার বন্ধু।',
+      ],
+    },
+    {
+      subtitle: 'Pronoun এর অনুশীলন',
       practice: [
-        '1. I love my country. (Personal Pronoun: I, Possessive Pronoun: my)',
-        '2. She gave herself a gift. (Personal Pronoun: She, Reflexive Pronoun: herself)',
-        '3. This is my book. (Demonstrative Pronoun: This, Possessive Pronoun: my)',
-        '4. Who is coming to the party? (Interrogative Pronoun: Who)',
-        '5. The boy whose book was lost is sad. (Relative Pronoun: whose)'
+        'ইংরেজিতে অনুবাদ করুন: সে কি তোমার বন্ধু?',
+        'বাক্যের গঠন পরীক্ষা করুন: She loves him.',
+        'Pronoun লিখুন: তুমি কি আমাকে সাহায্য করতে পারবে?',
       ]
     }
   ]

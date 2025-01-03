@@ -1,42 +1,48 @@
 export const conjunctionContent = {
-  title: 'Conjunction',
+  title: 'Conjunction (সংযোগী)',
   sections: [
     {
-      subtitle: 'Conjunction পরিচিতি',
-      content: 'Conjunction হল এমন শব্দ যা শব্দ, বাক্যাংশ বা বাক্যের মধ্যে সংযোগ স্থাপন করে।',
-      examples: [
-        'Coordinating Conjunctions: and, but, or, nor, for, yet, so',
-        'Subordinating Conjunctions: because, although, if, unless, since',
-        'Correlative Conjunctions: either...or, neither...nor, both...and'
-      ]
+      subtitle: 'Conjunction কি?',
+      content: 'Conjunction হল একটি শব্দ যা দুটি বা তার বেশি শব্দ, বাক্য বা অংশকে যুক্ত করে। উদাহরণস্বরূপ, “and”, “but”, “or” ইত্যাদি।'
     },
     {
-      subtitle: 'Conjunction-এর প্রকারভেদ',
-      content: 'Conjunction বিভিন্ন প্রকারের হয়:',
+      subtitle: 'Conjunction এর প্রকারভেদ',
       types: [
-        'Coordinating Conjunction: সমান গুরুত্বের শব্দ বা বাক্য যুক্ত করে (and, but)',
-        'Subordinating Conjunction: অসমান গুরুত্বের বাক্য যুক্ত করে (because, if)',
-        'Correlative Conjunction: যুগলভাবে ব্যবহৃত হয় (either...or, both...and)'
-      ]
-    },
-    {
-      subtitle: 'Conjunction-এর ব্যবহার',
-      content: 'Conjunction বাক্যে বিভিন্ন ভূমিকায় ব্যবহৃত হয়:',
+        '1. Additive Conjunction: দুটি বা তার বেশি বিষয়কে যোগ করার জন্য ব্যবহৃত হয়, যেমন “and”, “also”',
+        '2. Adversative Conjunction: দুটি বিষয়ে বিপরীততা প্রকাশ করার জন্য ব্যবহৃত হয়, যেমন “but”, “yet”',
+        '3. Alternative Conjunction: দুটি বিষয়ের মধ্যে নির্বাচন নির্দেশ করে, যেমন “or”, “either”',
+      ],
       examples: [
-        'Connecting Words: I like tea and coffee. (and হল Conjunction)',
-        'Connecting Clauses: I will go home because it is late. (because হল Conjunction)',
-        'Correlative Use: Either you come or I will leave. (either...or হল Conjunction)'
-      ]
+        'I like tea and coffee. - আমি চা ও কফি পছন্দ করি।',
+        'She was tired but continued working. - সে ক্লান্ত ছিল কিন্তু কাজ চালিয়ে গিয়েছিল।',
+      ],
     },
     {
-      subtitle: 'অনুশীলনী',
-      content: 'নিচের বাক্যগুলিতে Conjunction চিহ্নিত করুন:',
+      subtitle: 'Conjunction এর গঠন',
+      content: 'Conjunction সাধারণত দুটি অংশের মধ্যে সংযোগ স্থাপন করে। উদাহরণস্বরূপ, “I want to go, but I am tired.” (আমি যেতে চাই, কিন্তু আমি ক্লান্ত)।',
+      structure: 'Clause + Conjunction + Clause',
+    },
+    {
+      subtitle: 'Conjunction এর বৈশিষ্ট্য',
+      content: 'Conjunction এর কিছু বৈশিষ্ট্য হলো:',
+      types: [
+        '1. এটি দুটি বা তার বেশি বাক্য বা শব্দকে সংযুক্ত করে।',
+        '2. এটি বিভিন্ন প্রকারের হতে পারে যেমন Additive, Adversative, বা Alternative।',
+      ],
+    },
+    {
+      subtitle: 'Conjunction এর উদাহরণ',
+      examples: [
+        'You can have tea or coffee. - তুমি চা বা কফি নিতে পারো।',
+        'I wanted to go, but it was raining. - আমি যেতে চেয়েছিলাম, কিন্তু বৃষ্টি হচ্ছিল।',
+      ],
+    },
+    {
+      subtitle: 'Conjunction এর অনুশীলন',
       practice: [
-        '1. I like apples and oranges. (Coordinating Conjunction: and)',
-        '2. He will come if it does not rain. (Subordinating Conjunction: if)',
-        '3. Both Rahim and Karim are good students. (Correlative Conjunction: both...and)',
-        '4. She is tired but happy. (Coordinating Conjunction: but)',
-        '5. I will wait until you arrive. (Subordinating Conjunction: until)'
+        'ইংরেজিতে অনুবাদ করুন: আমি কি আসতে পারি?',
+        'বাক্যের গঠন পরীক্ষা করুন: He was tired, but he didn’t stop.',
+        'Conjunction লিখুন: তুমি কি চা বা কফি খাবে?',
       ]
     }
   ]

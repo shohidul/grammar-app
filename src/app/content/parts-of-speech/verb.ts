@@ -1,43 +1,49 @@
 export const verbContent = {
-  title: 'Verb',
+  title: 'Verb (ক্রিয়া)',
   sections: [
     {
-      subtitle: 'Verb পরিচিতি',
-      content: 'Verb হল এমন শব্দ যা কোনো কাজ, অবস্থা বা ঘটনা নির্দেশ করে।',
-      examples: [
-        'Action Verbs: run, eat, write, play',
-        'Linking Verbs: is, am, are, was, were',
-        'Helping Verbs: have, has, had, will, shall'
-      ]
+      subtitle: 'Verb কি?',
+      content: 'Verb হল একটি শব্দ যা কোন কাজ বা অবস্থা প্রকাশ করে। যেমন “খাওয়া”, “লেখা”, “ঘুমানো” ইত্যাদি।'
     },
     {
-      subtitle: 'Verb-এর প্রকারভেদ',
-      content: 'Verb বিভিন্ন প্রকারের হয়:',
+      subtitle: 'Verb এর প্রকারভেদ',
       types: [
-        'Action Verb: কোনো শারীরিক বা মানসিক কাজ (walk, think, sing)',
-        'Linking Verb: সাবজেক্ট সম্পর্কে তথ্য দেয় (seem, become, feel)',
-        'Auxiliary/Helping Verb: মুল Verb-কে সাহায্য করে (do, does, did)',
-        'Modal Verb: সম্ভাবনা, অনুমতি, বাধ্যবাধকতা প্রকাশ করে (can, could, may, might, must)'
-      ]
-    },
-    {
-      subtitle: 'Verb-এর ব্যবহার',
-      content: 'Verb বাক্যে বিভিন্ন ভূমিকায় ব্যবহৃত হয়:',
+        '1. প্রধান Verb (Main Verb): একটি নির্দিষ্ট কাজ বা অবস্থা প্রকাশ করে, যেমন “খাওয়া”, “যাওয়া”।',
+        '2. সহায়ক Verb (Auxiliary Verb): বাক্যে প্রধান Verb এর সহায়ক হিসেবে কাজ করে, যেমন “is”, “are”, “have” ইত্যাদি।',
+        '3. অবস্থামূলক Verb (Stative Verb): অবস্থা বা অবিকলতা প্রকাশ করে, যেমন “হওয়া”, “থাকা”।'
+      ],
       examples: [
-        'Subject Verb: She sings beautifully. (sings হল Subject Verb)',
-        'Helping Verb: I have completed my work. (have হল Helping Verb)',
-        'Modal Verb: You must study hard. (must হল Modal Verb)'
-      ]
+        'She is writing a letter. - সে একটি চিঠি লিখছে।',
+        'I eat lunch at 1 PM. - আমি ১টায় লাঞ্চ খাই।',
+      ],
     },
     {
-      subtitle: 'অনুশীলনী',
-      content: 'নিচের বাক্যগুলিতে Verb চিহ্নিত করুন:',
+      subtitle: 'Verb এর গঠন',
+      content: 'Verb সাধারণত Subject এবং Object এর মধ্যে ব্যবহৃত হয় এবং বাক্যে কর্মের বিষয় বা অবস্থা প্রকাশ করে। উদাহরণস্বরূপ, “He runs fast.” (সে দ্রুত দৌড়ায়)।',
+      structure: 'Subject + Verb + Object',
+    },
+    {
+      subtitle: 'Verb এর বৈশিষ্ট্য',
+      content: 'Verb এর কিছু বৈশিষ্ট্য হলো:',
+      types: [
+        '1. এটি কাজ বা অবস্থা প্রকাশ করে।',
+        '2. এটি বাক্যে প্রধান অংশ হিসেবে ব্যবহৃত হয়।',
+        '3. এটি Tense এর সাথে মিল রেখে বিভিন্ন রূপে ব্যবহার হয়।',
+      ],
+    },
+    {
+      subtitle: 'Verb এর উদাহরণ',
+      examples: [
+        'She eats breakfast. - সে নাস্তা খায়।',
+        'We are studying. - আমরা পড়ছি।',
+      ],
+    },
+    {
+      subtitle: 'Verb এর অনুশীলন',
       practice: [
-        '1. I play cricket every day. (Action Verb: play)',
-        '2. She seems happy. (Linking Verb: seems)',
-        '3. They have finished their homework. (Helping Verb: have)',
-        '4. You can speak English. (Modal Verb: can)',
-        '5. The cat is sleeping. (Action Verb: sleeping)'
+        'ইংরেজিতে অনুবাদ করুন: তুমি কি পড়তে পছন্দ করো?',
+        'বাক্যের গঠন পরীক্ষা করুন: He is reading a book.',
+        'Verb লিখুন: তারা কি খেলছে?',
       ]
     }
   ]

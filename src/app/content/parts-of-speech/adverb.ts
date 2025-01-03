@@ -1,44 +1,49 @@
 export const adverbContent = {
-  title: 'Adverb',
+  title: 'Adverb (ক্রিয়া বিশেষণ)',
   sections: [
     {
-      subtitle: 'Adverb পরিচিতি',
-      content: 'Adverb হল এমন শব্দ যা Verb, Adjective বা অন্য Adverb-এর বৈশিষ্ট্য বর্ণনা করে।',
-      examples: [
-        'Manner Adverbs: quickly, slowly, carefully',
-        'Time Adverbs: now, today, yesterday',
-        'Place Adverbs: here, there, everywhere'
-      ]
+      subtitle: 'Adverb কি?',
+      content: 'Adverb হল একটি শব্দ যা Verb, Adjective বা অন্য Adverb কে বর্ণনা বা সংশোধন করে। উদাহরণস্বরূপ, “দ্রুত”, “সুন্দরভাবে”, “সাবধানে”।'
     },
     {
-      subtitle: 'Adverb-এর প্রকারভেদ',
-      content: 'Adverb বিভিন্ন প্রকারের হয়:',
+      subtitle: 'Adverb এর প্রকারভেদ',
       types: [
-        'Manner Adverb: কিভাবে কাজ হয় বোঝায় (happily, quietly)',
-        'Time Adverb: কখন কাজ হয় বোঝায় (soon, always, never)',
-        'Place Adverb: কোথায় কাজ হয় বোঝায় (outside, everywhere)',
-        'Degree Adverb: কতটা বোঝায় (very, too, almost)',
-        'Frequency Adverb: কত বার বোঝায় (often, rarely, sometimes)'
-      ]
-    },
-    {
-      subtitle: 'Adverb-এর ব্যবহার',
-      content: 'Adverb বাক্যে বিভিন্ন ভূমিকায় ব্যবহৃত হয়:',
+        '1. ক্রিয়া বাচক Adverb (Adverb of Manner): এটি কাজের উপায় বা ধরণ প্রকাশ করে, যেমন “quickly”, “carefully”।',
+        '2. স্থান বাচক Adverb (Adverb of Place): এটি কাজের স্থান প্রকাশ করে, যেমন “here”, “there”।',
+        '3. সময় বাচক Adverb (Adverb of Time): এটি কাজের সময় প্রকাশ করে, যেমন “now”, “today”',
+        '4. পরিমাণ বাচক Adverb (Adverb of Degree): এটি কাজের পরিমাণ বা মাত্রা প্রকাশ করে, যেমন “very”, “too”',
+      ],
       examples: [
-        'Verb Modifier: He runs quickly. (quickly হল Adverb)',
-        'Adjective Modifier: She is extremely intelligent. (extremely হল Adverb)',
-        'Another Adverb Modifier: He works very carefully. (very হল Adverb)'
-      ]
+        'She speaks loudly. - সে জোরে কথা বলে।',
+        'They arrived late. - তারা দেরি করে পৌঁছেছে।',
+      ],
     },
     {
-      subtitle: 'অনুশীলনী',
-      content: 'নিচের বাক্যগুলিতে Adverb চিহ্নিত করুন:',
+      subtitle: 'Adverb এর গঠন',
+      content: 'Adverb সাধারণত Verb, Adjective বা অন্য Adverb এর সাথে ব্যবহৃত হয় এবং তা বাক্যের ভাব স্পষ্ট করে। উদাহরণস্বরূপ, “She runs fast.” (সে দ্রুত দৌড়ায়)।',
+      structure: 'Verb/Adjective/Adverb + Adverb',
+    },
+    {
+      subtitle: 'Adverb এর বৈশিষ্ট্য',
+      content: 'Adverb এর কিছু বৈশিষ্ট্য হলো:',
+      types: [
+        '1. এটি Verb, Adjective বা অন্য Adverb কে বিস্তারিতভাবে বর্ণনা করে।',
+        '2. এটি সময়, স্থান, পরিমাণ, বা ধরণ প্রকাশ করতে পারে।',
+      ],
+    },
+    {
+      subtitle: 'Adverb এর উদাহরণ',
+      examples: [
+        'He runs quickly. - সে দ্রুত দৌড়ায়।',
+        'She sings beautifully. - সে সুন্দরভাবে গায়।',
+      ],
+    },
+    {
+      subtitle: 'Adverb এর অনুশীলন',
       practice: [
-        '1. She sings beautifully. (Manner Adverb: beautifully)',
-        '2. I always study before exams. (Frequency Adverb: always)',
-        '3. He is very talented. (Degree Adverb: very)',
-        '4. They live somewhere near the city. (Place Adverb: somewhere)',
-        '5. The meeting will start soon. (Time Adverb: soon)'
+        'ইংরেজিতে অনুবাদ করুন: তুমি কি ভালোভাবে পড়ো?',
+        'বাক্যের গঠন পরীক্ষা করুন: She works hard.',
+        'Adverb লিখুন: তুমি কি তাড়াতাড়ি হাঁটো?',
       ]
     }
   ]

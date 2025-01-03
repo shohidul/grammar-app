@@ -1,44 +1,49 @@
 export const nounContent = {
-  title: 'Noun',
+  title: 'Noun (সর্বনাম)',
   sections: [
     {
-      subtitle: 'Noun পরিচিতি',
-      content: 'Noun হল এমন শব্দ যা কোনো ব্যক্তি, বস্তু, স্থান, প্রাণী বা ধারণার নাম বোঝায়।',
-      examples: [
-        'Person: Rahim, Teacher, Doctor',
-        'Place: Dhaka, School, Park',
-        'Thing: Book, Computer, Table',
-        'Animal: Cat, Dog, Lion'
-      ]
+      subtitle: 'Noun কি?',
+      content: 'Noun হল একটি শব্দ যা ব্যক্তি, বস্তু, স্থান, বা ধারণাকে প্রকাশ করে। উদাহরণস্বরূপ, “মানুষ”, “বই”, “কলকাতা” ইত্যাদি।'
     },
     {
-      subtitle: 'Noun-এর প্রকারভেদ',
-      content: 'Noun বিভিন্ন প্রকারের হয়:',
+      subtitle: 'Noun এর প্রকারভেদ',
       types: [
-        'Proper Noun: নির্দিষ্ট ব্যক্তি, স্থান বা বস্তুর নাম (Rahim, Bangladesh)',
-        'Common Noun: সাধারণ ব্যক্তি, বস্তু বা স্থানের নাম (boy, city, book)',
-        'Collective Noun: একই ধরনের ব্যক্তি বা বস্তুর সমষ্টি (team, family, crowd)',
-        'Abstract Noun: অমূর্ত ধারণা বা অনুভূতি (love, happiness, courage)'
-      ]
-    },
-    {
-      subtitle: 'Noun-এর ব্যবহার',
-      content: 'Noun বাক্যে বিভিন্ন ভূমিকায় ব্যবহৃত হয়:',
+        '1. সাধারণ Noun (Common Noun): একটি সাধারণ শ্রেণী বা ধরনের নাম, যেমন "বই", "কুকুর"।',
+        '2. বিশেষ Noun (Proper Noun): একক বা নির্দিষ্ট নাম, যেমন "জন", "কলকাতা"।',
+        '3. গুণগত Noun (Collective Noun): একটি গোষ্ঠী বা দলকে প্রকাশ করে, যেমন "দল", "কবিতা"।',
+        '4. বস্তুগত Noun (Material Noun): একটি পদার্থ বা বস্তু, যেমন "পানি", "সোনা"।',
+      ],
       examples: [
-        'Subject: Rahim goes to school. (Rahim হল Subject)',
-        'Object: I saw a cat. (cat হল Object)',
-        'Complement: He became a teacher. (teacher হল Complement)'
-      ]
+        'The dog is barking. - কুকুরটি ঘেউ ঘেউ করছে।',
+        'I live in Dhaka. - আমি ঢাকা শহরে বাস করি।',
+      ],
     },
     {
-      subtitle: 'অনুশীলনী',
-      content: 'নিচের বাক্যগুলিতে Noun চিহ্নিত করুন:',
+      subtitle: 'Noun এর গঠন',
+      content: 'Noun সাধারণত বাক্যে Subject, Object বা Complement হিসেবে ব্যবহৃত হয়। উদাহরণস্বরূপ, "John went to the market." (জন বাজারে গেল)।',
+      structure: 'Noun + Verb + Object',
+    },
+    {
+      subtitle: 'Noun এর বৈশিষ্ট্য',
+      content: 'Noun এর কিছু বৈশিষ্ট্য হলো:',
+      types: [
+        '1. এটি ব্যক্তির নাম, স্থানের নাম, বস্তু বা ধারণার নাম হতে পারে।',
+        '2. এটি বাক্যে প্রধান অংশ হিসেবে ব্যবহৃত হয়।',
+      ],
+    },
+    {
+      subtitle: 'Noun এর উদাহরণ',
+      examples: [
+        'I saw a cat. - আমি একটি বিড়াল দেখলাম।',
+        'She went to the market. - সে বাজারে গেল।',
+      ],
+    },
+    {
+      subtitle: 'Noun এর অনুশীলন',
       practice: [
-        '1. Rahim is reading a book. (Proper Noun: Rahim, Common Noun: book)',
-        '2. The team won the match. (Collective Noun: team, Common Noun: match)',
-        '3. Love is a beautiful feeling. (Abstract Noun: love, feeling)',
-        '4. The cat sat on the mat. (Common Noun: cat, mat)',
-        '5. Bangladesh is my motherland. (Proper Noun: Bangladesh)'
+        'ইংরেজিতে অনুবাদ করুন: তুমি কোথায় থাকো?',
+        'বাক্যের গঠন পরীক্ষা করুন: She loves to read books.',
+        'Noun লিখুন: তোমার প্রিয় খাবার কী?',
       ]
     }
   ]
