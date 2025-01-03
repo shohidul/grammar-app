@@ -24,8 +24,9 @@ import { MenuService } from '../../services/menu.service';
       </div>
 
       <div class="contents">
+        <h4>English Grammar</h4>
         <div class="topics-grid" #topicsGrid>
-          @for (topic of grammarTopics; track topic.name) {
+          @for (topic of englishGrammarTopics; track topic.name) {
             <button 
               class="topic-item"
               [class.selected]="selectedIcon?.icon === topic.icon && selectedIcon?.name === topic.name"
@@ -77,6 +78,10 @@ import { MenuService } from '../../services/menu.service';
         display: none;
       }
     }
+
+    .contents h4{
+      padding: 1rem 1rem 0.5rem 1rem;
+    }
     
     .topics-grid {
       display: grid;
@@ -120,7 +125,7 @@ import { MenuService } from '../../services/menu.service';
 export class DashboardComponent implements OnInit {
   isAdvancedMode: boolean = false;
   selectedIcon: any = null;
-  grammarTopics = [
+  englishGrammarTopics = [
     { name: 'Tense', icon: 'schedule', route: 'tense' },
     { name: 'Parts of Speech', icon: 'text_fields', route: 'parts-of-speech' },
     { name: 'Verb Forms', icon: 'apps', route: 'verb-forms' },
