@@ -133,6 +133,7 @@ export class DashboardComponent implements OnInit {
   grammerTopics = [
     { name: 'Tense', icon: 'schedule', route: 'tense' },
     { name: 'Parts of Speech', icon: 'text_fields', route: 'parts-of-speech' },
+    { name: 'Verb Forms', icon: 'apps', route: 'verb-forms' },
     { name: 'Sentence', icon: 'text_snippet', route: 'sentence' },
     { name: 'Article', icon: 'article', route: 'article' },
     { name: 'Voice', icon: 'record_voice_over', route: 'voice' },

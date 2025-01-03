@@ -21,6 +21,7 @@ import { adverbContent } from '../content/parts-of-speech/adverb';
 import { prepositionContent } from '../content/parts-of-speech/preposition';
 import { conjunctionContent } from '../content/parts-of-speech/conjunction';
 import { interjectionContent } from '../content/parts-of-speech/interjection';
+import { verbFormsContent } from '../content/verb-forms/verb-forms';
 
 export interface Buttons{
   name: string;
@@ -224,6 +225,15 @@ export class GrammarContentService {
       title: interjectionContent.title,
       sections: [
         ...interjectionContent.sections,
+      ]
+    }
+  }
+
+  getVerbFormsContent(): GrammarContent | null {
+    return {
+      title: verbFormsContent.title,
+      sections: [
+        ...verbFormsContent.sections,
       ]
     }
   }

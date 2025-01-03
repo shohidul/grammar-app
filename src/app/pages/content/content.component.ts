@@ -210,40 +210,48 @@ export class ContentComponent implements OnInit {
     private location: Location
   ) {
     this.route.params.subscribe(params => {
-      this.loadContent(params['topic']);
+      this.content = this.loadContent(params['topic']);
     });
   }
 
   ngOnInit() {
   }
 
-  private loadContent(topic: string) {
-    this.content = topic === 'tense' 
-      ? this.grammarService.getTenseContent(): topic === 'present-indefinite' 
-      ? this.grammarService.getPresentIndefiniteTenseContent(): topic === 'present-continuous' 
-      ? this.grammarService.getPresentContinuousTenseContent(): topic === 'present-perfect' 
-      ? this.grammarService.getPresentPerfectTenseContent(): topic === 'present-perfect-continuous' 
-      ? this.grammarService.getPresentPerfectContinuousTenseContent(): topic === 'past-indefinite' 
-      ? this.grammarService.getPastIndefiniteTenseContent(): topic === 'past-continuous' 
-      ? this.grammarService.getPastContinuousTenseContent(): topic === 'past-perfect' 
-      ? this.grammarService.getPastPerfectTenseContent(): topic === 'past-perfect-continuous' 
-      ? this.grammarService.getPastPerfectContinuousTenseContent(): topic === 'future-indefinite' 
-      ? this.grammarService.getFutureIndefiniteTenseContent(): topic === 'future-continuous' 
-      ? this.grammarService.getFutureContinuousTenseContent(): topic === 'future-perfect' 
-      ? this.grammarService.getFuturePerfectTenseContent(): topic === 'future-perfect-continuous' 
+  private loadContent(topic: string): GrammarContent | null {
+    const contentMap = new Map<string, () => GrammarContent | null>([
+      // Tense
+      ['tense', () => this.grammarService.getTenseContent()],
+      ['present-indefinite', () => this.grammarService.getPresentIndefiniteTenseContent()],
+      ['present-continuous', () => this.grammarService.getPresentContinuousTenseContent()],
+      ['present-perfect', () => this.grammarService.getPresentPerfectTenseContent()],
+      ['present-perfect-continuous', () => this.grammarService.getPresentPerfectContinuousTenseContent()],
+      ['past-indefinite', () => this.grammarService.getPastIndefiniteTenseContent()],
+      ['past-continuous', () => this.grammarService.getPastContinuousTenseContent()],
+      ['past-perfect', () => this.grammarService.getPastPerfectTenseContent()],
+      ['past-perfect-continuous', () => this.grammarService.getPastPerfectContinuousTenseContent()],
+      ['future-indefinite', () => this.grammarService.getFutureIndefiniteTenseContent()],
+      ['future-continuous', () => this.grammarService.getFutureContinuousTenseContent()],
+      ['future-perfect', () => this.grammarService.getFuturePerfectTenseContent()],
+      ['future-perfect-continuous', () => this.grammarService.getFuturePerfectContinuousTenseContent()],
       
       // Parts of Speech
-      ? this.grammarService.getFuturePerfectContinuousTenseContent(): topic === 'parts-of-speech' 
-      ? this.grammarService.getPartsOfSpeechContent(): topic === 'noun' 
-      ? this.grammarService.getNounContent(): topic === 'pronoun' 
-      ? this.grammarService.getPronounContent(): topic === 'verb' 
-      ? this.grammarService.getVerbContent(): topic === 'adjective' 
-      ? this.grammarService.getAdjectiveContent(): topic === 'adverb' 
-      ? this.grammarService.getAdverbContent(): topic === 'preposition' 
-      ? this.grammarService.getPrepositionContent(): topic === 'conjunction' 
-      ? this.grammarService.getConjunctionContent(): topic === 'interjection' 
-      ? this.grammarService.getInterjectionContent(): null;
-  }
+      ['parts-of-speech', () => this.grammarService.getPartsOfSpeechContent()],
+      ['noun', () => this.grammarService.getNounContent()],
+      ['pronoun', () => this.grammarService.getPronounContent()],
+      ['verb', () => this.grammarService.getVerbContent()],
+      ['adjective', () => this.grammarService.getAdjectiveContent()],
+      ['adverb', () => this.grammarService.getAdverbContent()],
+      ['preposition', () => this.grammarService.getPrepositionContent()],
+      ['conjunction', () => this.grammarService.getConjunctionContent()],
+      ['interjection', () => this.grammarService.getInterjectionContent()],
+      
+      // Verb Forms
+      ['verb-forms', () => this.grammarService.getVerbFormsContent()],
+    ]);
+  
+    const contentLoader = contentMap.get(topic);
+    return contentLoader ? contentLoader() : null;
+  }  
 
   goToDetails(route: string) {
     const formattedRoute = route.toLowerCase().replace(/\s+/g, '-');
