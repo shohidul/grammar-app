@@ -231,7 +231,18 @@ export class ContentComponent implements OnInit {
       ? this.grammarService.getFutureIndefiniteTenseContent(): topic === 'future-continuous' 
       ? this.grammarService.getFutureContinuousTenseContent(): topic === 'future-perfect' 
       ? this.grammarService.getFuturePerfectTenseContent(): topic === 'future-perfect-continuous' 
-      ? this.grammarService.getFuturePerfectContinuousTenseContent(): null;
+      
+      // Parts of Speech
+      ? this.grammarService.getFuturePerfectContinuousTenseContent(): topic === 'parts-of-speech' 
+      ? this.grammarService.getPartsOfSpeechContent(): topic === 'noun' 
+      ? this.grammarService.getNounContent(): topic === 'pronoun' 
+      ? this.grammarService.getPronounContent(): topic === 'verb' 
+      ? this.grammarService.getVerbContent(): topic === 'adjective' 
+      ? this.grammarService.getAdjectiveContent(): topic === 'adverb' 
+      ? this.grammarService.getAdverbContent(): topic === 'preposition' 
+      ? this.grammarService.getPrepositionContent(): topic === 'conjunction' 
+      ? this.grammarService.getConjunctionContent(): topic === 'interjection' 
+      ? this.grammarService.getInterjectionContent(): null;
   }
 
   goToDetails(route: string) {

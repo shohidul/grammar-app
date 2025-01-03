@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { tenseContent } from '../content/tenses';
+import { tenseContent } from '../content/tenses/tense';
 import { presentIndefiniteTense } from '../content/tenses/present-indefinite';
 import { presentContinuousTense } from '../content/tenses/present-continuous';
 import { presentPerfectTense } from '../content/tenses/present-perfect';
@@ -12,6 +12,15 @@ import { futureIndefiniteTense } from '../content/tenses/future-indefinite';
 import { futureContinuousTense } from '../content/tenses/future-continuous';
 import { futurePerfectTense } from '../content/tenses/future-perfect';
 import { futurePerfectContinuousTense } from '../content/tenses/future-perfect-continuous';
+import { partsOfSpeechContent } from '../content/parts-of-speech/parts-of-speech';
+import { nounContent } from '../content/parts-of-speech/noun';
+import { pronounContent } from '../content/parts-of-speech/pronoun';
+import { verbContent } from '../content/parts-of-speech/verb';
+import { adjectiveContent } from '../content/parts-of-speech/adjective';
+import { adverbContent } from '../content/parts-of-speech/adverb';
+import { prepositionContent } from '../content/parts-of-speech/preposition';
+import { conjunctionContent } from '../content/parts-of-speech/conjunction';
+import { interjectionContent } from '../content/parts-of-speech/interjection';
 
 export interface Buttons{
   name: string;
@@ -134,6 +143,87 @@ export class GrammarContentService {
       title: futurePerfectContinuousTense.title,
       sections: [
         ...futurePerfectContinuousTense.sections,
+      ]
+    }
+  }
+
+  getPartsOfSpeechContent(): GrammarContent | null {
+    return {
+      title: partsOfSpeechContent.title,
+      sections: [
+        ...partsOfSpeechContent.sections,
+      ]
+    }
+  }
+
+  getNounContent(): GrammarContent | null {
+    return {
+      title: nounContent.title,
+      sections: [
+        ...nounContent.sections,
+      ]
+    }
+  }
+
+  getPronounContent(): GrammarContent | null {
+    return {
+      title: pronounContent.title,
+      sections: [
+        ...pronounContent.sections,
+      ]
+    }
+  }
+
+  getVerbContent(): GrammarContent | null {
+    return {
+      title: verbContent.title,
+      sections: [
+        ...verbContent.sections,
+      ]
+    }
+  }
+
+  getAdjectiveContent(): GrammarContent | null {
+    return {
+      title: adjectiveContent.title,
+      sections: [
+        ...adjectiveContent.sections,
+      ]
+    }
+  }
+
+  getAdverbContent(): GrammarContent | null {
+    return {
+      title: adverbContent.title,
+      sections: [
+        ...adverbContent.sections,
+      ]
+    }
+  }
+
+  getPrepositionContent(): GrammarContent | null {
+    return {
+      title: prepositionContent.title,
+      sections: [
+        ...prepositionContent.sections,
+      ]
+    }
+  }
+
+  getConjunctionContent(): GrammarContent | null {
+    return {
+      title: conjunctionContent.title,
+      sections: [
+        ...conjunctionContent.sections,
+      ]
+    }
+  }
+
+  getInterjectionContent(): GrammarContent | null {
+    return {
+      title: interjectionContent.title,
+      sections: [
+        ...interjectionContent.sections,
       ]
     }
   }

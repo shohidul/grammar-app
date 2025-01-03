@@ -34,16 +34,16 @@ import { MenuService } from '../../services/menu.service';
       </div>
 
       <div class="contents">
-        <div class="categories-grid" #categoriesGrid>
-          @for (category of grammerCategories; track category.name) {
+        <div class="topics-grid" #topicsGrid>
+          @for (topic of grammerTopics; track topic.name) {
             <button 
-              class="category-item"
-              [class.selected]="selectedIcon?.icon === category.icon && selectedIcon?.name === category.name"
-              (click)="selectCategory(category)"
-              #categoryButton
+              class="topic-item"
+              [class.selected]="selectedIcon?.icon === topic.icon && selectedIcon?.name === topic.name"
+              (click)="selectTopic(topic)"
+              #topicButton
             >
-              <span class="material-symbols-rounded">{{ category.icon }}</span>
-              <span class="category-name">{{ category.name }}</span>
+              <span class="material-symbols-rounded">{{ topic.icon }}</span>
+              <span class="topic-name">{{ topic.name }}</span>
             </button>
           }
         </div>
@@ -88,7 +88,7 @@ import { MenuService } from '../../services/menu.service';
       }
     }
     
-    .categories-grid {
+    .topics-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
       gap: 1rem;
@@ -96,7 +96,7 @@ import { MenuService } from '../../services/menu.service';
       overflow-y: auto;
     }
 
-    .category-item {
+    .topic-item {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -112,16 +112,16 @@ import { MenuService } from '../../services/menu.service';
       border: 1px dashed var(--dashed-border);
     }
 
-    .category-item:hover {
+    .topic-item:hover {
       background-color: var(--background-color-hover);
     }
 
-    .category-item.selected {
+    .topic-item.selected {
       background-color: var(--primary-color);
       color: white !important;
     }
 
-    .category-name {
+    .topic-name {
       font-size: 0.75rem;
       text-align: center;
     }
@@ -130,10 +130,13 @@ import { MenuService } from '../../services/menu.service';
 export class DashboardComponent implements OnInit {
   isAdvancedMode: boolean = false;
   selectedIcon: any = null;
-  grammerCategories = [
+  grammerTopics = [
     { name: 'Tense', icon: 'schedule', route: 'tense' },
-    { name: 'Sentence', icon: 'text_fields', route: 'sentence' },
-    { name: 'Article', icon: 'article', route: 'article' }
+    { name: 'Parts of Speech', icon: 'text_fields', route: 'parts-of-speech' },
+    { name: 'Sentence', icon: 'text_snippet', route: 'sentence' },
+    { name: 'Article', icon: 'article', route: 'article' },
+    { name: 'Voice', icon: 'record_voice_over', route: 'voice' },
+    { name: 'Narration', icon: 'chat', route: 'narration' }
   ];
 
   constructor(
@@ -149,9 +152,9 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  selectCategory(category: any) {
-    this.selectedIcon = category;
-    this.router.navigate(['/content', category.route]);
+  selectTopic(topic: any) {
+    this.selectedIcon = topic;
+    this.router.navigate(['/content', topic.route]);
   }
   
   reloadPage() {
