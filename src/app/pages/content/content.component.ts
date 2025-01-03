@@ -275,6 +275,9 @@ export class ContentComponent implements OnInit {
 
       // Voice
       ['voice', () => this.grammarService.getVoiceContent()],
+
+      // Narration
+      ['narration', () => this.grammarService.getNarrationContent()],
     ]);
   
     const contentLoader = contentMap.get(topic);

@@ -33,6 +33,7 @@ import { imperativeSentenceContent } from '../content/sentence/imperative-senten
 import { exclamatorySentenceContent } from '../content/sentence/exclamatory-sentence';
 import { articlesContent } from '../content/article/article';
 import { voiceContent } from '../content/voice/voice';
+import { narrationContent } from '../content/narration/narration';
 
 export interface Buttons{
   name: string;
@@ -345,6 +346,15 @@ export class GrammarContentService {
       title: voiceContent.title,
       sections: [
         ...voiceContent.sections,
+      ]
+    }
+  }
+
+  getNarrationContent(): GrammarContent | null {
+    return {
+      title: narrationContent.title,
+      sections: [
+        ...narrationContent.sections,
       ]
     }
   }
