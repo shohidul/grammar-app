@@ -269,6 +269,9 @@ export class ContentComponent implements OnInit {
       ['interrogative-sentence', () => this.grammarService.getInterrogativeSentenceContent()],
       ['imperative-sentence', () => this.grammarService.getImperativeSentenceContent()],
       ['exclamatory-sentence', () => this.grammarService.getExclamatorySentenceContent()],
+      
+      // Articles
+      ['article', () => this.grammarService.getArticlesContent()],
     ]);
   
     const contentLoader = contentMap.get(topic);

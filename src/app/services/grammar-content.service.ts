@@ -31,6 +31,7 @@ import { assertiveSentenceContent } from '../content/sentence/assertive-sentence
 import { interrogativeSentenceContent } from '../content/sentence/interrogative-sentence';
 import { imperativeSentenceContent } from '../content/sentence/imperative-sentence';
 import { exclamatorySentenceContent } from '../content/sentence/exclamatory-sentence';
+import { articlesContent } from '../content/article/article';
 
 export interface Buttons{
   name: string;
@@ -325,6 +326,15 @@ export class GrammarContentService {
       title: exclamatorySentenceContent.title,
       sections: [
         ...exclamatorySentenceContent.sections,
+      ]
+    }
+  }
+
+  getArticlesContent(): GrammarContent | null {
+    return {
+      title: articlesContent.title,
+      sections: [
+        ...articlesContent.sections,
       ]
     }
   }
