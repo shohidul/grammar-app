@@ -31,6 +31,17 @@ import { GrammarContentService, GrammarContent } from '../../services/grammar-co
                 </div>
               }
               
+              @if (section.types && section.types.length > 0) {
+                <div class="types">
+                  <h4>Types:</h4>
+                  <ul>
+                    @for (type of section.types; track type) {
+                      <li>{{ type }}</li>
+                    }
+                  </ul>
+                </div>
+              }
+              
               @if (section.examples && section.examples.length > 0) {
                 <div class="examples">
                   <h4>Examples:</h4>
@@ -89,6 +100,10 @@ import { GrammarContentService, GrammarContent } from '../../services/grammar-co
       padding: 1rem;
       border-radius: 4px;
       margin: 1rem 0;
+      display: flex;
+      column-gap: 0.5rem;
+      align-items: baseline;
+      flex-wrap: wrap;
     }
 
     .structure h4 {
@@ -100,26 +115,31 @@ import { GrammarContentService, GrammarContent } from '../../services/grammar-co
       font-size: 1.1em;
     }
 
-    .examples, .practice {
+    .types,.examples, .practice {
       background-color: var(--background-color);
       padding: 1rem;
       border-radius: 4px;
       margin-top: 1rem;
     }
 
-    .examples h4, .practice h4 {
+    .types h4, .examples h4, .practice h4 {
       color: var(--text-primary);
       margin-bottom: 0.5rem;
     }
 
-    .examples ul, .practice ul {
+    .types ul, .examples ul, .practice ul {
       list-style-position: inside;
       color: var(--text-primary);
     }
 
-    .examples li, .practice li {
+    .types li, .examples li, .practice li {
       margin-bottom: 0.5rem;
       line-height: 1.4;
+      list-style: none;
+    }
+
+    span {
+      display: contents;
     }
 
     .practice {

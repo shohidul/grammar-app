@@ -5,6 +5,7 @@ export interface GrammarContent {
   sections: {
     subtitle: string;
     content: string;
+    types?: string[];
     examples?: string[];
     practice?: string[];
     structure?: string;
@@ -31,7 +32,7 @@ export class GrammarContentService {
         {
           subtitle: 'Tense এর প্রধান প্রকারভেদ',
           content: 'ইংরেজিতে তিনটি মূল Tense আছে:',
-          examples: [
+          types: [
             '1. Present Tense - বর্তমানে বা নিয়মিত ঘটে এমন কাজ',
             '2. Past Tense - অতীতে ঘটে গেছে এমন কাজ',
             '3. Future Tense - ভবিষ্যতে ঘটবে এমন কাজ'
@@ -40,7 +41,7 @@ export class GrammarContentService {
         {
           subtitle: 'প্রতিটি Tense এর উপপ্রকার',
           content: 'প্রতিটি মূল Tense এর চারটি করে উপপ্রকার আছে:',
-          examples: [
+          types: [
             '1. Indefinite/Simple - সাধারণ কাজ',
             '2. Continuous/Progressive - চলমান কাজ',
             '3. Perfect - সম্পূর্ণ হওয়া কাজ',

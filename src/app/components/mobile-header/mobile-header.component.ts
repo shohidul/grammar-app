@@ -46,8 +46,8 @@ import { RouterModule } from '@angular/router';
 
     @media (min-width: 768px) {
       .show-on-desktop {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
       }
     }
     @media (max-width: 768px) {
@@ -71,6 +71,8 @@ import { RouterModule } from '@angular/router';
       padding: 0.5rem;
       cursor: pointer;
       border-radius: 50%;
+      width: 42px;
+      height: 42px;
     }
 
     .back-button:hover,

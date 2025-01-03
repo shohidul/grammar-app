@@ -33,7 +33,7 @@ import { ThemeService } from './services/theme.service';
     main {
       flex: 1;
       overflow-y: auto;
-      padding: 1rem;
+      padding: unset;
       min-width: 0;
       background: var(--background-color);
     }
