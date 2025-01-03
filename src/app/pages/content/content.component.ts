@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MobileHeaderComponent } from '../../components/mobile-header/mobile-header.component';
 import { GrammarContentService, GrammarContent } from '../../services/grammar-content.service';
@@ -61,6 +61,21 @@ import { GrammarContentService, GrammarContent } from '../../services/grammar-co
                       <li>{{ item }}</li>
                     }
                   </ul>
+                </div>
+              }
+
+              @if (section.buttons && section.buttons.length > 0) {
+                <div class="buttons">
+                @for (button of section.buttons;  track button ) {
+                  <button
+                      class="button"
+                      (click)="goToDetails(button.route)"
+                      #categoryButton
+                    >
+                      <!-- <span class="material-symbols-rounded">{{ i + 1 }}</span> -->
+                      <span class="button-name">{{ button.name }}</span>
+                    </button>
+                }
                 </div>
               }
             </div>
@@ -145,6 +160,44 @@ import { GrammarContentService, GrammarContent } from '../../services/grammar-co
     .practice {
       border-left: 4px solid var(--primary-color);
     }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      padding: 1rem 0;
+      overflow-y: auto;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 0.5rem;
+      border-radius: 8px;
+      background: none;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+      border: 1px dashed var(--dashed-border);
+    }
+
+    .button:hover {
+      background-color: var(--background-color-hover);
+    }
+
+    .button.selected {
+      background-color: var(--primary-color);
+      color: white !important;
+    }
+
+    .button-name {
+      font-size: 0.75rem;
+      text-align: center;
+    }
   `]
 })
 export class ContentComponent implements OnInit {
@@ -153,17 +206,40 @@ export class ContentComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private grammarService: GrammarContentService
-  ) {}
+    private grammarService: GrammarContentService,
+    private location: Location
+  ) {
+    this.route.params.subscribe(params => {
+      this.loadContent(params['topic']);
+    });
+  }
 
   ngOnInit() {
-    const topic = this.route.snapshot.params['topic'];
+  }
+
+  private loadContent(topic: string) {
     this.content = topic === 'tense' 
-      ? this.grammarService.getTenseContent(): null;
-      //: this.grammarService.getOtherContent(topic);
+      ? this.grammarService.getTenseContent(): topic === 'present-indefinite' 
+      ? this.grammarService.getPresentIndefiniteTenseContent(): topic === 'present-continuous' 
+      ? this.grammarService.getPresentContinuousTenseContent(): topic === 'present-perfect' 
+      ? this.grammarService.getPresentPerfectTenseContent(): topic === 'present-perfect-continuous' 
+      ? this.grammarService.getPresentPerfectContinuousTenseContent(): topic === 'past-indefinite' 
+      ? this.grammarService.getPastIndefiniteTenseContent(): topic === 'past-continuous' 
+      ? this.grammarService.getPastContinuousTenseContent(): topic === 'past-perfect' 
+      ? this.grammarService.getPastPerfectTenseContent(): topic === 'past-perfect-continuous' 
+      ? this.grammarService.getPastPerfectContinuousTenseContent(): topic === 'future-indefinite' 
+      ? this.grammarService.getFutureIndefiniteTenseContent(): topic === 'future-continuous' 
+      ? this.grammarService.getFutureContinuousTenseContent(): topic === 'future-perfect' 
+      ? this.grammarService.getFuturePerfectTenseContent(): topic === 'future-perfect-continuous' 
+      ? this.grammarService.getFuturePerfectContinuousTenseContent(): null;
+  }
+
+  goToDetails(route: string) {
+    const formattedRoute = route.toLowerCase().replace(/\s+/g, '-');
+    this.router.navigate(['/content', formattedRoute]);
   }
 
   goBack() {
-    this.router.navigate(['/']);
+    this.location.back();
   }
 }
