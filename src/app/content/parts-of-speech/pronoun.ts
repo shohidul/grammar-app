@@ -17,7 +17,7 @@ export const pronounContent = {
     {
       subtitle: 'Pronoun-এর প্রকারভেদ',
       content: 'Pronoun বিভিন্ন প্রকারের হয়:',
-      examples: [
+      types: [
         'Personal Pronoun: I, you, he, she, it, we, they',
         'Possessive Pronoun: mine, yours, his, hers, its, ours, theirs',
         'Reflexive Pronoun: myself, yourself, himself, herself, itself, ourselves, themselves',

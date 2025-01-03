@@ -14,7 +14,7 @@ export const nounContent = {
     {
       subtitle: 'Noun-এর প্রকারভেদ',
       content: 'Noun বিভিন্ন প্রকারের হয়:',
-      examples: [
+      types: [
         'Proper Noun: নির্দিষ্ট ব্যক্তি, স্থান বা বস্তুর নাম (Rahim, Bangladesh)',
         'Common Noun: সাধারণ ব্যক্তি, বস্তু বা স্থানের নাম (boy, city, book)',
         'Collective Noun: একই ধরনের ব্যক্তি বা বস্তুর সমষ্টি (team, family, crowd)',

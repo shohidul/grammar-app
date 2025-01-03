@@ -31,7 +31,7 @@ import { TranslatePipe } from '../../components/shared/translate.pipe';
       />
 
       <div class="content">
-        <app-mode-card />
+        <!-- <app-mode-card /> -->
         <app-language-card />
         <app-theme-card />
         <app-security-card />

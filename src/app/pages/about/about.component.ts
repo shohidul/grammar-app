@@ -17,11 +17,11 @@ import { MobileHeaderComponent } from '../../components/mobile-header/mobile-hea
 
       <div class="content">
         <div class="app-info card">
-          <h3>Grammer</h3>
+          <h3>Grammer App</h3>
           <p class="version">Version 1.0.0</p>
-          <p class="description">
+          <!-- <p class="description">
             Description here...
-          </p>
+          </p> -->
         </div>
 
         <div class="developer card">
@@ -43,13 +43,13 @@ import { MobileHeaderComponent } from '../../components/mobile-header/mobile-hea
           </div>
         </div>
 
-        <div class="privacy card">
+        <!-- <div class="privacy card">
           <h3>Privacy & Security</h3>
           <p>
             All your data is stored locally on your device. We don't collect or transmit any personal information.
             The app works offline and your financial data remains private and secure.
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
   `,
