@@ -13,7 +13,7 @@ import { FeatureFlagService } from '../../services/feature-flag.service';
       <div class="menu-header">
         <img src="assets/images/logo.png" alt="Logo" class="logo" (error)="onImageError($event)" *ngIf="!logoFailed" />
         <span *ngIf="logoFailed" class="material-icons">wallet</span>
-        <h1>Grammer</h1>
+        <h1>Grammar</h1>
       </div>
       <div class="menu-items">
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="close()">

@@ -17,7 +17,7 @@ import { MobileHeaderComponent } from '../../components/mobile-header/mobile-hea
 
       <div class="content">
         <div class="app-info card">
-          <h3>Grammer App</h3>
+          <h3>Grammar App</h3>
           <p class="version">Version 1.0.0</p>
           <!-- <p class="description">
             Description here...

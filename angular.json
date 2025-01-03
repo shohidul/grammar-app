@@ -5,7 +5,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "grammer-app": {
+    "grammar-app": {
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -34,7 +34,7 @@
             ],
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "outputPath": "dist/grammer-app",
+            "outputPath": "dist/grammar-app",
             "polyfills": ["zone.js"],
             "scripts": [],
             "styles": ["src/styles.css"],
@@ -45,10 +45,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "development": {
-              "buildTarget": "grammer-app:build:development"
+              "buildTarget": "grammar-app:build:development"
             },
             "production": {
-              "buildTarget": "grammer-app:build:production"
+              "buildTarget": "grammar-app:build:production"
             }
           },
           "defaultConfiguration": "development"

@@ -35,7 +35,7 @@ import { MenuService } from '../../services/menu.service';
 
       <div class="contents">
         <div class="topics-grid" #topicsGrid>
-          @for (topic of grammerTopics; track topic.name) {
+          @for (topic of grammarTopics; track topic.name) {
             <button 
               class="topic-item"
               [class.selected]="selectedIcon?.icon === topic.icon && selectedIcon?.name === topic.name"
@@ -130,7 +130,7 @@ import { MenuService } from '../../services/menu.service';
 export class DashboardComponent implements OnInit {
   isAdvancedMode: boolean = false;
   selectedIcon: any = null;
-  grammerTopics = [
+  grammarTopics = [
     { name: 'Tense', icon: 'schedule', route: 'tense' },
     { name: 'Parts of Speech', icon: 'text_fields', route: 'parts-of-speech' },
     { name: 'Verb Forms', icon: 'apps', route: 'verb-forms' },
