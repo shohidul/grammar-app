@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MobileHeaderComponent } from '../../components/mobile-header/mobile-header.component';
-import { SecurityCardComponent } from './components/security-card.component';
+// import { SecurityCardComponent } from './components/security-card.component';
 // import { DataManagementCardComponent } from './components/data-management-card.component';
-import { LanguageCardComponent } from './components/language-card.component';
+// import { LanguageCardComponent } from './components/language-card.component';
 import { AppModeCardComponent } from './components/app-mode-card.component';
 import { ThemeCardComponent } from './components/theme-card.component';
 import { TranslatePipe } from '../../components/shared/translate.pipe';
@@ -15,10 +15,10 @@ import { TranslatePipe } from '../../components/shared/translate.pipe';
   imports: [
     CommonModule,
     MobileHeaderComponent,
-    SecurityCardComponent,
+    // SecurityCardComponent,
     // DataManagementCardComponent,
-    LanguageCardComponent,
-    AppModeCardComponent,
+    // LanguageCardComponent,
+    // AppModeCardComponent,
     ThemeCardComponent,
     TranslatePipe,
   ],
@@ -32,9 +32,9 @@ import { TranslatePipe } from '../../components/shared/translate.pipe';
 
       <div class="content">
         <!-- <app-mode-card /> -->
-        <app-language-card />
+        <!-- <app-language-card /> -->
         <app-theme-card />
-        <app-security-card />
+        <!-- <app-security-card /> -->
         <!-- <app-data-management-card /> -->
       </div>
     </div>

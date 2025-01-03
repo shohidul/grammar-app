@@ -22,6 +22,15 @@ import { prepositionContent } from '../content/parts-of-speech/preposition';
 import { conjunctionContent } from '../content/parts-of-speech/conjunction';
 import { interjectionContent } from '../content/parts-of-speech/interjection';
 import { verbFormsContent } from '../content/verb-forms/verb-forms';
+import { sentenceContent } from '../content/sentence/sentence';
+import { simpleSentenceContent } from '../content/sentence/simple-sentence';
+import { compoundSentenceContent } from '../content/sentence/compound-sentence';
+import { complexSentenceContent } from '../content/sentence/complex-sentence';
+import { compoundComplexSentenceContent } from '../content/sentence/compound-complex-sentence';
+import { assertiveSentenceContent } from '../content/sentence/assertive-sentence';
+import { interrogativeSentenceContent } from '../content/sentence/interrogative-sentence';
+import { imperativeSentenceContent } from '../content/sentence/imperative-sentence';
+import { exclamatorySentenceContent } from '../content/sentence/exclamatory-sentence';
 
 export interface Buttons{
   name: string;
@@ -33,11 +42,12 @@ export interface GrammarContent {
   title: string;
   sections: {
     subtitle: string;
-    content: string;
+    content?: string;
     buttons?: Buttons[];
     types?: string[];
     examples?: string[];
     practice?: string[];
+    rules?: string[];
     structure?: string;
   }[];
 }
@@ -234,6 +244,87 @@ export class GrammarContentService {
       title: verbFormsContent.title,
       sections: [
         ...verbFormsContent.sections,
+      ]
+    }
+  }
+
+  getSentenceContent(): GrammarContent | null {
+    return {
+      title: sentenceContent.title,
+      sections: [
+        ...sentenceContent.sections,
+      ]
+    }
+  }
+
+  getSimpleSentenceContent(): GrammarContent | null {
+    return {
+      title: simpleSentenceContent.title,
+      sections: [
+        ...simpleSentenceContent.sections,
+      ]
+    }
+  }
+
+  getCompoundSentenceContent(): GrammarContent | null {
+    return {
+      title: compoundSentenceContent.title,
+      sections: [
+        ...compoundSentenceContent.sections,
+      ]
+    }
+  }
+
+  getComplexSentenceContent(): GrammarContent | null {
+    return {
+      title: complexSentenceContent.title,
+      sections: [
+        ...complexSentenceContent.sections,
+      ]
+    }
+  }
+
+  getCompoundComplexSentenceContent(): GrammarContent | null {
+    return {
+      title: compoundComplexSentenceContent.title,
+      sections: [
+        ...compoundComplexSentenceContent.sections,
+      ]
+    }
+  }
+
+  getAssertiveSentenceContent(): GrammarContent | null {
+    return {
+      title: assertiveSentenceContent.title,
+      sections: [
+        ...assertiveSentenceContent.sections,
+      ]
+    }
+  }
+
+  getInterrogativeSentenceContent(): GrammarContent | null {
+    return {
+      title: interrogativeSentenceContent.title,
+      sections: [
+        ...interrogativeSentenceContent.sections,
+      ]
+    }
+  }
+
+  getImperativeSentenceContent(): GrammarContent | null {
+    return {
+      title: imperativeSentenceContent.title,
+      sections: [
+        ...imperativeSentenceContent.sections,
+      ]
+    }
+  }
+
+  getExclamatorySentenceContent(): GrammarContent | null {
+    return {
+      title: exclamatorySentenceContent.title,
+      sections: [
+        ...exclamatorySentenceContent.sections,
       ]
     }
   }

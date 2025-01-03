@@ -52,6 +52,17 @@ import { GrammarContentService, GrammarContent } from '../../services/grammar-co
                   </ul>
                 </div>
               }
+              
+              @if (section.rules && section.rules.length > 0) {
+                <div class="rules">
+                  <h4>Rules:</h4>
+                  <ul>
+                    @for (rule of section.rules; track rule) {
+                      <li>{{ rule }}</li>
+                    }
+                  </ul>
+                </div>
+              }
 
               @if (section.practice && section.practice.length > 0) {
                 <div class="practice">
@@ -130,24 +141,24 @@ import { GrammarContentService, GrammarContent } from '../../services/grammar-co
       font-size: 1.1em;
     }
 
-    .types,.examples, .practice {
+    .types, .examples, .practice, .rules {
       background-color: var(--background-color);
       padding: 1rem;
       border-radius: 4px;
       margin-top: 1rem;
     }
 
-    .types h4, .examples h4, .practice h4 {
+    .types h4, .examples h4, .practice h4, .rules h4 {
       color: var(--text-primary);
       margin-bottom: 0.5rem;
     }
 
-    .types ul, .examples ul, .practice ul {
+    .types ul, .examples ul, .practice ul, .rules ul {
       list-style-position: inside;
       color: var(--text-primary);
     }
 
-    .types li, .examples li, .practice li {
+    .types li, .examples li, .practice li, .rules li {
       margin-bottom: 0.5rem;
       line-height: 1.4;
       list-style: none;
@@ -247,6 +258,17 @@ export class ContentComponent implements OnInit {
       
       // Verb Forms
       ['verb-forms', () => this.grammarService.getVerbFormsContent()],
+
+      // Sentence
+      ['sentence', () => this.grammarService.getSentenceContent()],
+      ['simple-sentence', () => this.grammarService.getSimpleSentenceContent()],
+      ['compound-sentence', () => this.grammarService.getCompoundSentenceContent()],
+      ['complex-sentence', () => this.grammarService.getComplexSentenceContent()],
+      ['compound-complex-sentence', () => this.grammarService.getCompoundComplexSentenceContent()],
+      ['assertive-sentence', () => this.grammarService.getAssertiveSentenceContent()],
+      ['interrogative-sentence', () => this.grammarService.getInterrogativeSentenceContent()],
+      ['imperative-sentence', () => this.grammarService.getImperativeSentenceContent()],
+      ['exclamatory-sentence', () => this.grammarService.getExclamatorySentenceContent()],
     ]);
   
     const contentLoader = contentMap.get(topic);

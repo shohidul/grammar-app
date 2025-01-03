@@ -1,11 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
-import { MonthPickerComponent } from '../../components/month-picker/month-picker.component';
-import { TranslatePipe } from '../../components/shared/translate.pipe';
-import { TranslateDatePipe } from '../../components/shared/translate-date.pipe';
-import { TranslateNumberPipe } from '../../components/shared/translate-number.pipe';
 import { FeatureFlagService } from '../../services/feature-flag.service';
 import { DOCUMENT } from '@angular/common';
 import { MenuService } from '../../services/menu.service';
@@ -15,11 +10,6 @@ import { MenuService } from '../../services/menu.service';
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
-    MonthPickerComponent,
-    TranslatePipe,
-    TranslateDatePipe,
-    TranslateNumberPipe
   ],
   template: `
     <div class="dashboard">
